@@ -1,5 +1,6 @@
 package com.misbah.kaoutar.misbahkaoutarexamjee.entities;
 
+import com.misbah.kaoutar.misbahkaoutarexamjee.enums.OuiNon;
 import com.misbah.kaoutar.misbahkaoutarexamjee.enums.TypeMoto;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
@@ -20,5 +21,5 @@ public class Moto extends Vehicule {
     @Enumerated(EnumType.STRING)
     private TypeMoto typeMoto;
 
-    private boolean casqueInclus;
+    private OuiNon casqueInclus;
 }
