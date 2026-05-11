@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 public class Moto extends Vehicule {
-    private double cylindree;
+    private Integer cylindree;
 
     @Enumerated(EnumType.STRING)
     private TypeMoto typeMoto;
