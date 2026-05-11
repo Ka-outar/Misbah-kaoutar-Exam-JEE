@@ -1,28 +1,21 @@
 package com.misbah.kaoutar.misbahkaoutarexamjee.entities;
 
 import com.misbah.kaoutar.misbahkaoutarexamjee.enums.BoiteVitesse;
-import com.misbah.kaoutar.misbahkaoutarexamjee.enums.OuiNon;
 import com.misbah.kaoutar.misbahkaoutarexamjee.enums.TypeCarburant;
-import com.misbah.kaoutar.misbahkaoutarexamjee.enums.TypeMoto;
-import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class Moto extends Vehicule {
+@Entity
 
-    private Integer cylindree;
-
-    @Enumerated(EnumType.STRING)
-    private TypeMoto typeMoto;
+public class Voiture extends Vehicule {
+    private Integer nombrePortes;
 
     @Enumerated(EnumType.STRING)
-    private OuiNon casqueInclus;
+    private TypeCarburant typeCarburant;
+
+    @Enumerated(EnumType.STRING)
+    private BoiteVitesse boiteVitesse;
 }
