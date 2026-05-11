@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Data
@@ -15,10 +16,14 @@ public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private LocalDate dateDebut;
-    private LocalDate dateFin;
-    private double prixTotal;
+
+    private Date dateDebut;
+    private Date dateFin;
+    private Double montantTotal;
+    private String clientNom;
+    private String clientEmail;
 
     @ManyToOne
+    @JoinColumn(name = "vehicule_id")
     private Vehicule vehicule;
 }

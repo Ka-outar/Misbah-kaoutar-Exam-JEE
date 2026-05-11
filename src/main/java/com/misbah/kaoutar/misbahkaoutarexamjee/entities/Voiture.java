@@ -1,7 +1,9 @@
 package com.misbah.kaoutar.misbahkaoutarexamjee.entities;
 
 import com.misbah.kaoutar.misbahkaoutarexamjee.enums.BoiteVitesse;
+import com.misbah.kaoutar.misbahkaoutarexamjee.enums.OuiNon;
 import com.misbah.kaoutar.misbahkaoutarexamjee.enums.TypeCarburant;
+import com.misbah.kaoutar.misbahkaoutarexamjee.enums.TypeMoto;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -14,12 +16,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Voiture extends Vehicule {
-    private int nombrePortes;
+public class Moto extends Vehicule {
+
+    private Integer cylindree;
 
     @Enumerated(EnumType.STRING)
-    private TypeCarburant typeCarburant;
+    private TypeMoto typeMoto;
 
     @Enumerated(EnumType.STRING)
-    private BoiteVitesse boiteVitesse;
+    private OuiNon casqueInclus;
 }

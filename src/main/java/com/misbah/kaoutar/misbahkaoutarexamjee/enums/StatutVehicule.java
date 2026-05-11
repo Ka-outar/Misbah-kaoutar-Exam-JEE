@@ -1,5 +1,5 @@
 package com.misbah.kaoutar.misbahkaoutarexamjee.enums;
 
-public enum Vehicule_Status {
+public enum StatutVehicule {
     Disponible, Loue, EnMaintenance
 }
